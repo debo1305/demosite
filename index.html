@@ -1,0 +1,40 @@
+<html>
+<head>
+    <script src="jquery-3.5.1.min.js"></script>
+    <title>This a demo test site</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>  <label for="cars">Choose a car:</label> </td>
+            <td> 
+                    <select name="cars" id="cars">
+                      <option value="Volvo">Volvo</option>
+                      <option value="Saab">Saab</option>
+                      <option value="Mercedes">Mercedes</option>
+                    </select>
+            </td>
+        </tr>
+        <tr>
+                <td>  <label for="numberofcars">Number of cars</label> </td>
+                <td> 
+                        <input type="number" id="numberofcars" name="numberofcars">
+                </td>
+        </tr>
+        <tr>
+                <td> <input type="submit" value="Submit" id="submitbtn"> </td>
+            </tr>
+    </table>
+    <script type="text/javascript">
+    $(function(){
+        $("#submitbtn").click(function(evt){
+            evt.preventDefault();
+            localStorage.setItem('car-model', $("#cars").val());
+            localStorage.setItem('number-of-car', $("#numberofcars").val());
+            window.location.href = "mid-page.html";
+        });
+
+    });
+    </script>
+</body>
+</html>

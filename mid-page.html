@@ -1,0 +1,34 @@
+<html>
+<head>
+    <script src="jquery-3.5.1.min.js"></script>
+    <title>This a demo test Mid Page</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>  <span id="result-text"> </td>
+           
+        </tr>
+        <tr>
+                <td>  <label for="investingamount">Investing amount</label> </td>
+                <td> 
+                        <input type="number" id="investingamount" name="investingamount">
+                </td>
+        </tr>
+        <tr>
+                <td> <input type="submit" value="Submit" id="submitbtn"> </td>
+            </tr>
+    </table>
+    <script type="text/javascript">
+    $(function(){
+        $("#result-text").text("Car Model - " +localStorage.getItem('car-model')+ " & Number of Cars - "+ localStorage.getItem('number-of-car'));
+        $("#submitbtn").click(function(evt){
+            evt.preventDefault();
+            localStorage.setItem('invest-amount', $("#investingamount").val());
+            window.location.href = "result.html";
+        });
+
+    });
+    </script>
+</body>
+</html>
