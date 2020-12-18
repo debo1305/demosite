@@ -10,9 +10,9 @@
            
         </tr>
         <tr>
-                <td>  <label for="amrit">Investing amount</label> </td>
+                <td>  <label for="investingamount">Investing amount</label> </td>
                 <td> 
-                        <input type="number" id="amrit" name="investingamount">
+                        <input type="number" id="investingamount" name="investingamount">
                 </td>
         </tr>
         <tr>
@@ -24,7 +24,7 @@
         $("#result-text").text("Car Model - " +localStorage.getItem('car-model')+ " & Number of Cars - "+ localStorage.getItem('number-of-car'));
         $("#submitbtn").click(function(evt){
             evt.preventDefault();
-            localStorage.setItem('invest-amount', $("#amrit").val());
+            localStorage.setItem('invest-amount', $("#investingamount").val());
             window.location.href = "result.html";
         });
 
