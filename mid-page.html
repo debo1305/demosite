@@ -16,13 +16,13 @@
                 </td>
         </tr>
         <tr>
-                <td> <input type="submit" value="Submit here" id="submitbtn"> </td>
+                <td> <input type="submit" value="Submit here" id="submit"> </td>
             </tr>
     </table>
     <script type="text/javascript">
     $(function(){
         $("#result-text").text("Car Model - " +localStorage.getItem('car-model')+ " & Number of Cars - "+ localStorage.getItem('number-of-car'));
-        $("#submitbtn").click(function(evt){
+        $("#submit").click(function(evt){
             evt.preventDefault();
             localStorage.setItem('invest-amount', $("#investingamount").val());
             window.location.href = "result.html";
